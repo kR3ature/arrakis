@@ -1,0 +1,2875 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+pre
+	{mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+tt
+	{font-family:"Courier New";}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-link:"HTML Preformatted";
+	font-family:"Courier New";}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Configure user aliases: </span></li>
+</ul>
+
+<table class=MsoNormalTable border=0 cellspacing=1 cellpadding=0 width="100%"
+ style='width:100.0%;margin-left:.5in;background:black'>
+ <tr>
+  <td style='background:silver;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>File: </span><span
+  style='font-size:10.0pt;font-family:"Courier New";color:black'>$HOME/.bashrc</span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'> </span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:black'>    alias
+  ct=/usr/atria/bin/cleartool<br>
+      alias sv='/usr/atria/bin/cleartool setview'<br>
+      umask 022<br>
+      </span></p>
+  </td>
+  <td style='background:silver;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>File:
+  </span><span style='font-size:10.0pt;font-family:"Courier New";color:black'>$HOME/.cshrc</span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'> </span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New";color:black'>    alias ct
+  /usr/atria/bin/cleartool<br>
+      alias sv '/usr/atria/bin/cleartool setview'<br>
+      umask 022<br>
+      </span></p>
+  </td>
+ </tr>
+</table>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif;color:white'>This umask will set the
+     default privileges on new files and direcotries. Default protection will
+     be set so that the user may write data but others can re</span><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'>ad. </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Commands: </span></li>
+</ul>
+
+<table class=MsoNormalTable border=1 cellpadding=0 style='margin-left:.5in'>
+ <tr>
+  <td style='background:silver;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>ClearCase
+  Command</span></b></p>
+  </td>
+  <td style='background:silver;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Description</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct -ver</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Display
+  Clearcase, cleartool, db_server and VOB database schema version.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lsvob</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List vob mount
+  table: </span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>* /vob/<i>VOB-NAME</i>.vbt      
+  /hosts/<i>host-name</i>/r1vob/vobs/vobstore/<i>VOB-NAME</i>.vbs public<br>
+  * /vob/practice_vob.vbt  /hosts/<i>host-name</i>/<i>view-name</i>/Vobs/vobstore/practice_vob.vbs
+  public</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct dump <i>element-or-DO</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Print internal
+  Clearcase info.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lsview</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List all views: </span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>  millesc_view   /hosts/<i>host-name</i>/<i>view-name</i>/Views/millesc_view.vws<br>
+  * <i>user-name</i>       /hosts/<i>host-name</i>/<i>view-name</i>/Views/reg_view.vws</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lsview <i>view-tag</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List view path.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct mktag -view -tag <i>dynamic-view-name</i>
+  -nstart /hosts/<i>node-name</i>/home/cleardata/views/<i>dynamic-view-name</i></span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'><br>
+  <b>or</b><br>
+  </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct mktag -vob
+  <i>vob-tag</i> ...</span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Create a
+  view-tag or VOB-tag.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct mkview -tag <i>user1_view</i>
+  -stgloc <i>viewstore</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Create a new
+  view in &quot;viewstore&quot; Clearcase server view mount point (see YoLinux <a
+  href="http://www.yolinux.com/TUTORIALS/LinuxClearcaseClient.html">client</a>
+  or <a
+  href="http://www.yolinux.com/TUTORIALS/LinuxClearcaseServerInstallation.html">server</a>
+  installation tutorial).<br>
+  List view storage locations: </span><span style='font-size:10.0pt;font-family:
+  "Courier New"'>ct lsstgloc</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct mkview -tag <i>tmpA_view</i>
+  /hosts/<i>node-name</i>/home/cleardata/views/<i>tmpA_view</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Create a new
+  view.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct setview <i>user-name_view</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Set current view
+  to <i>user-name_view</i>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct startview <i>common_view</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Set current view
+  to common_view without starting a Clearcase shell environent. It allows one
+  to view (only) the files. Path: </span><span style='font-size:10.0pt;
+  font-family:"Courier New"'>/view/common_view/vob/<i>vob-name</i>/...</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct endview <i>common_view</i></span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'><br>
+  </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct endview
+  -server <i>user-name_view</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Deactivate a
+  Clearcase view. (First exit view)<br>
+  Useful if you get stale NFS handles.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct rmview -tag <i>temp_view</i><br>
+  or<br>
+  ct rmview <i>temp_view</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove view
+  temp_view.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>cleartool setview <i>username_view</i><br>
+  sv <i>user-name_view</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Set Clearcase
+  view. See alias defined above.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct pwv</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Print working
+  view/current view: </span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>Working directory view: <i>username_view</i><br>
+  Set view: <i>username_view</i></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>echo $CLEARCASE_ROOT</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Print current
+  view path.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct ls -l<br>
+  ct ls -vob_only</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Using current
+  view, show files, private files, file version and rule.<br>
+  -vob_only: List elements and not derived objects<br>
+  Format: </span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>...<br>
+  version              <i>file.ext</i>@@/main/2       Rule: element
+  */main/LATEST<br>
+  directory version    <i>Directoy-name</i>@@/main/2  Rule: element *
+  /main/LATEST<br>
+  view private object  file2.c<br>
+  ...</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lstype -kind lbtype
+  -list labels</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List labels</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lsvtree -all <i>file-name.ext</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List file
+  version label and build label: (version tree) </span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><i><span
+  style='font-size:10.0pt;font-family:"Courier New"'>file-name.ext</span></i><span
+  style='font-size:10.0pt;font-family:"Courier New"'>@@/main<br>
+  <i>file-name.ext</i>@@/main/0<br>
+  <i>file-name.ext</i>@@/main/1 (BUILD_1_0)<br>
+  <i>file-name.ext</i>@@/main/2 (BUILD_1_1)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lsvtree -all <i>pref*</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List file
+  version label and build label for files beginning with &quot;pref&quot;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lshistory [all] <i>file-or-directory</i></span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'><br>
+  </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct lshistory <i>file-name</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List file or
+  directory version history.<br>
+  List event rocords for a given file.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct chevent -c
+  'new-comment-goes-here' -replace -event <i>event-id</i><br>
+  ct chevent -c 'new-comment-goes-here' -replace -lbtype <i>label</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Change the
+  comment on a version of an element.<br>
+  Lookup event id: </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct
+  lsh -event <i>file-or-element<br>
+  Change the comment on a label.</i></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lsco<br>
+  ct lsco -r<br>
+  ct lsco -avobs -me<br>
+  ct lsco -avobs -cview</span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List all checked
+  out files in current directory.<br>
+  Flag &quot;-r&quot; recusivly looks in sub directories.<br>
+  List all files checked out to all views.<br>
+  List checkouts in view.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lscheckout -l<br>
+  ct lsco -l<br>
+  ct lsco -recursive -me -cview</span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List checked out
+  files.<br>
+  (same)<br>
+  List files in current directory and subdirectories checked out to you in
+  current view. Omit </span><span style='font-size:10.0pt;font-family:"Courier New"'>-cview</span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'> tag to get all.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct catcr <i>file-name</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List
+  configuration record for a file.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct find ./ -branch
+  'brtype(<i>branch-name</i>)' -print<br>
+  ct find ./ -version(main/LATEST) &amp;&amp; \! version(<i>LABEL_X</i>)'
+  -print</span><span style='font-size:12.0pt;font-family:"Times New Roman",serif'><br>
+  ct find -avobs -nxname -element 'brtype(<i>view_name</i>)' -print</span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List files in
+  branch with search name or attribute.<br>
+  List files with label &quot;LATEST&quot; but not <i>LABEL_X</i>.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lsprivate<br>
+  ct lsp -co</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List all private
+  files in current view. View private files are files residing in the Clearcase
+  filesystem but not under the control of Clearcase. i.e. object files as a
+  result of a compile. May not be viewable by others.<br>
+  List files checked out to current view.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct mklbtype -nc <i>LABEL_NAME</i><br>
+  ct mklbtype -c &quot;<i>comment</i>&quot; <i>LABEL_NAME</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Create a label
+  to be used later.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lstype -kind lbtype
+  -short | sort</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List labels.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct describe -l <i>file.ext</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Describe object
+  in VOB. Lists branch and version of file and configspec used in view.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct describe <i>file-or-directory</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List file or
+  directory information.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct describe -long element:<i>file-or-directory</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List file or
+  directory information.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct describe -long vob:<i>/vob</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List vob
+  information.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct mklabel <i>LABEL_NAME
+  file-name.ext</i><br>
+  ct mklabel -r <i>LABEL_NAME</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Apply label to a
+  file.<br>
+  Label elements in directory tree.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct mklabel -replace <i>NEW_LABEL_NAME
+  file-name.ext@@/main/4</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Apply label to a
+  newer version of the file.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct rmtype -rmall -force
+  lbtype:<i>LABEL_NAME</i><br>
+  ct rmtype -lbtype -rmall <i>LABEL_NAME</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove a label
+  of the name given. The option &quot;-rmall&quot; causes the removal of all
+  instances of the label on all files / directories.Remove label type and all
+  occurrences of the label.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct rmtype lbtype:<i>LABEL_NAME</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove label
+  from Clearcase. It will not be removed if label has been applied. Use option
+  &quot;-rmall&quot; to remove label and all instances of its application.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct rmtype -rmall -brtype <i>branch-type</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove branch
+  and all files / directories in branch from Clearcase. Data disposed in
+  &quot;lost-found&quot;.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct find -avobs -version
+  &quot;lbtype (<i>Build-Label</i>)&quot; -print<br>
+  ct find . -name '*.[hc]' -element 'lbtype_sub(<i>LABEL_NAME</i>)' -print</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Print all files
+  and file versions going into build specified.<br>
+  list all .h and .c files whith the given label.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct co -nc <i>file-name</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Check-Out file
+  (RCS command) -No Comment</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct mkdir <i>directory-name</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Create a
+  directory. Checkout parent directory first.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct ln -s <i>source-directory-name</i>
+  <i>local-directory-name</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Create a
+  symbolic link to a directory. Checkout parent directory first.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct mkelem -ci -nc <i>filename</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Add file to
+  Clearcase control.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct rmelem <i>filename</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove file from
+  Clearcase control. All history and knowledge of the element is completely
+  removed. By contrast, the &quot;ct rm&quot; command will remove the file and
+  not the history and the directory must be checked out in order to make this
+  change.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct rmelem -rm <i>filename</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove file from
+  Clearcase control and remove private view file.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct rmelem <i>directory-name/*</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove
+  directory, revision history and its contents from Clearcase control.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct rmver <i>filename</i>@@/main/LATEST</span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'><br>
+  or<br>
+  </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct rmver <i>filename</i></span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'><br>
+  or<br>
+  </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct rmver <i>filename</i>@@/main/22</span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'><br>
+  or remove specifed version on main branch:<br>
+  </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct rmver
+  -force -xlabel -ver /main/22 <i>file-or-element-name</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove latest
+  version checked in of the file from Clearcase. Second example removes version
+  22 from the Clearcase change management system. Previous versions will be
+  available from the archive.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct rm <i>filename</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove file from
+  Clearcase view. First perform a checkout (&quot;ct co&quot;) of the file and
+  directory. Past versions will be available from the archive although not
+  visible in current view. Safer than &quot;ct rmelem&quot; which removes all
+  knowledge of the file old and new.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct reserve <i>file-name</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Lock file.
+  Convert unreserved checkout to reserved.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct unco <i>file-name</i><br>
+  ct unco -rm <i>file-name</i><br>
+  ct uncheckout <i>file-name</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>UN-Check-Out
+  file. Cancel a checkout of a file.<br>
+  Cancel a checkout of a file and remove file which was checked out. Not
+  removed from Clearcase, just view private the checked out file is
+  deleted/cleaned up.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct co -unr -nc <i>file-name</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Checkout file
+  even though file is checked out by another. Checkout &quot;unreserved&quot;,
+  must be merged at a later time.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct checkout -unreserved <i>file-name</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Not locked.
+  Checkout to read, print, etc. Same as above command.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct ci <i>file-name</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Check-In file.
+  (also </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct
+  checkin <i>file-name</i></span><span style='font-size:12.0pt;font-family:
+  "Times New Roman",serif'>) Enter comment,enter &quot;.&quot; as sole
+  character on line and enter.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct diff -gra -pre <i>file-name</i>
+  &amp;<br>
+  ct diff -pred <i>file-name</i><br>
+  ct xdiff -pred <i>file-name</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Graphical
+  Diff/Merge tool.<br>
+  Clearcase diff between current file and predecessor.<br>
+  X-windows diff with predecessor.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct mv <i>file-name_A</i> <i>file-name_B</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Rename a file.
+  Be sure to checkout the parent directory first. If moving file to a new
+  directory, check out the target directory as well.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct protect -r -chmod 775 <i>directory-or-file-name</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Set
+  directory/file/element protection.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:silver;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Configspec commands</span></b></p>
+  </td>
+  <td style='background:silver;padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct catcs</span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></p>
+  <p class=MsoNormal style='line-height:normal'><span style='font-size:10.0pt;
+  font-family:"Courier New"'>ct catcs -tag <i>view_tag</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Print rules of
+  current view (configspec): </span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>element * CHECKEDOUT<br>
+  element * /main/LATEST</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'><br>
+  Look at the configspec associated with another view.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct edcs</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Edit current
+  rules of view (config spec): <br>
+  Change from: </span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>element * CHECKEDOUT<br>
+  element * /main/LATEST</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>To: </span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>element * <i>Build-Label</i><br>
+  element -directory * /main/Latest</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Close vi: wq<br>
+  </span><span style='font-size:10.0pt;font-family:"Courier New"'>Set config
+  spec for view &quot;<i>username_view</i>&quot;? [yes]</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct setcs -default<br>
+  ct setcs -cur</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Reset to default
+  view rules.<br>
+  Re-evaluate current configspec.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct update -add_loadrules</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Updates elemets
+  in snapshot view. GUI tool. Reevaluates config spec and reselects VOB
+  elements to show. The option &quot;-add_loadrules&quot; allows you to load
+  rules to your config spec and load elements which satisfy the rules.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:silver;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Help and Information commands</span></b></p>
+  </td>
+  <td style='background:silver;padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct man <i>clearcase-command</i><br>
+  ct man env_ccase</span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Man page for
+  Clearcase command.<br>
+  List Clearcase environment variables.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct apropos <i>search-word</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List commands
+  and man page summaries for related Clearcase command.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct help</span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'><br>
+  </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct help <i>clearcase-command</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Help facility
+  (simple). Lists possible command arguments.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:silver;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Tree/Branch commands</span></b></p>
+  </td>
+  <td style='background:silver;padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lstype -kind brtype<br>
+  ct lstype -kind brtype -invob /vob/<i>vob-name</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List all
+  branches.<br>
+  List all branches in the vob specified.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct find -avobs -version
+  'brtype(<i>branch-type</i>)' -print</span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Find all files
+  of the specified branch name in all mounted VOB's. Find branch name with the </span><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lstype</span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'> command..</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lsvtree -all *<br>
+  ct lsvtree <i>file-name</i><br>
+  ct lsvtree -g <i>file-name</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List version
+  trees (labels and branches) of files (even those without labels or branches).<br>
+  List all branches of specified file.<br>
+  Launch GUI display and show version tree (labels and branches) for a given
+  file.<br>
+  (<span style='color:red'>[Potential Pitfall]</span>: You may have to issue
+  the command </span><span style='font-size:10.0pt;font-family:"Courier New"'>export
+  LANG=C</span><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>
+  prior to launching GUI.)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct chtype</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Change element
+  type or rename branch.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct mkbranch</span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'><br>
+  </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct mkbranch
+  -nc <i>branch-name</i> <i>file-to-branch.cpp</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Create a new
+  branch in version tree. Use the command </span><span style='font-size:10.0pt;
+  font-family:"Courier New"'>mkbrtype</span><span style='font-size:12.0pt;
+  font-family:"Times New Roman",serif'> to create the branch type (name) first.
+  This command also checks out the file. The config spec needs to include this branch
+  so file can be viewed.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct rmbranch</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove a branch
+  in version tree.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct mkbrtype</span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'><br>
+  </span><span style='font-size:10.0pt;font-family:"Courier New"'>mkbrtype -c
+  &quot;Comment goes here&quot; <i>branch_name</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Create a new
+  branch type object.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct merge</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Merge
+  changes/differences of a file from another branch.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct findmerge<br>
+  ct findmerge ./ -ftag <i>VIEW-TAG</i> -print</span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Determines
+  whether a merge is required for a file in your view.<br>
+  Find files in current directory tree which need to be merged. Use the </span><span
+  style='font-size:10.0pt;font-family:"Courier New"'>describe</span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'> command to see
+  if branch has been merged. If so it wil be stated as such.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:silver;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Derived Objects commands</span></b></p>
+  </td>
+  <td style='background:silver;padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lsdo -l</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List derived
+  objects.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct rmdo</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove a derived
+  object.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct winkin *.o *.a <i>executables</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Wink-in a
+  derived object.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:silver;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  color:black'>Admin commands</span></b></p>
+  </td>
+  <td style='background:silver;padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>clearexport_ffile -r <i>directory-name</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Create file
+  cvt_data which is the result of a recursive export of files from given
+  directory name..</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>clearlicense </span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List number of
+  allowable client connections and list who is holding a license.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>clearlicense -rel <i>user</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Release license
+  from user who is holding a license.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>getcache<br>
+  ct getcache -mvfs</span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Display
+  Clearcase view or MVFS cache parameters.<br>
+  Troubleshoot by listing cache misses (Cache misses are bad). Perform this
+  command on the server itself.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>getlog</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Examine Clearcase
+  log files.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>hostinfo</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Display
+  configuration data for a Clearcase host.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>lock</span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lock vob:/vob/project</span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lock -brtype -obsolete <i>branch-type</i></span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lock lbtype:<i>LABEL_NAME</i></span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lock <i>file-name.cpp</i></span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lock -nusers user1,
+  user2 brtype:branchX</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Command to lock
+  a VOB, element, branch, type object or storage pool. </span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Lock vob for
+  read-only access.Disable write, create, delete, modify</span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Hide branch
+  permanently.</span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Lock code with
+  given label.</span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Lock a file from
+  use.</span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Lock all users
+  except user1 and user2 on branchX</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>unlock<br>
+  ct unlock -brtype <i>branch-type</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Unlock a VOB
+  object.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>lslock</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List locks.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>lsclients</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List client list
+  for lisence or registry host server.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>lsreplica</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List replicas of
+  a VOB.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>mkpool</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Create or modify
+  VOB storage pool.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>rmpool</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove a storage
+  pool from a VOB.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>lspool</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List storage
+  pools.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>chpool</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Change the
+  storage pool to which an element is assigned.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>mkregion</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Register a new
+  Clearcase network region.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>rmregion</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Unregister a
+  Clearcase network region.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>lsregion</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List Clearcase
+  network region.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>mktrigger</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Attach a trigger
+  to an element.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>rmtrigger</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove trigger
+  from an element.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>mktrtype</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Create a trigger
+  object.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>mkvob<br>
+  ct mkvob -tag <i>VOB-tag</i> -c &quot;<i>comment</i>&quot; /<i>vobpath</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Create and
+  register a versioned object base.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>rmvob<br>
+  ct rmvob /<i>vobpath</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove a VOB.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>lsvob</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List of mounted
+  VOBs.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>checkvob</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Fix
+  inconsistancies between VOB database and storage pools.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>protectvob</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Change owner or
+  group of a VOB.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>reformatvob</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Update the
+  format of a VOB. Use command &quot;</span><span style='font-size:10.0pt;
+  font-family:"Courier New"'>ct -ver</span><span style='font-size:12.0pt;
+  font-family:"Times New Roman",serif'>&quot; to find the current VOB database
+  schema version.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>rmtag</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove a VOB tag
+  from a storage registry.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>complete_migration</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Take VOB out of
+  migration mode.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>mount<br>
+  ct mount <i>VOB-tag</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Activate a VOB.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>unmount<br>
+  ct umount <i>VOB-tag</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Deactivate a
+  VOB. <br>
+  (&quot;ct describe -vob&quot; to show VOB info/owner)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>register</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Create an entry
+  in the VOB/view storage registry.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>unregister</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove a
+  VOB/view from storage registry.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>relocate</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Move elements
+  and directory trees from one VOB to another.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>rename</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Asign a new name
+  to a Clearcase object (i.e. pool, replica, label). Use mv to change the name
+  of a file or directory.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>setcache<br>
+  ct setcache -view -host -cachesize 1024k<br>
+  ct setcache -view -site -cachesize 2m<br>
+  ct setcache -view -cachesize 5m <i>view_tag</i></span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Set Clearcase
+  view or MVFS cache parameters.<br>
+  Set cache size for all views on server to 1024 Kb.<br>
+  Set cache size for all views site-wide to 2 Mb.<br>
+  set cache size for a single specified view.<br>
+  View with </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct
+  lssite -inquire</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>mvfscache</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Controls and
+  monitors MVFS caches (dynamic views only).</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>ct lssite -inquire</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>List site-wide
+  properties in the site config registry.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>setsite</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Sets or unsets
+  site-wide properties in the site config registry. </span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>View cache size</span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>defaults for
+  Windows clients</span></p>
+  <p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Courier New"'>o<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>defaults for
+  chechin and checkout preserve</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>space</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Report VOB disk
+  space usage.</span></p>
+  </td>
+ </tr>
+</table>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif;color:white'>GUI tools: </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>/usr/atria/bin/xclearcase &amp;</span><span style='font-size:
+12.0pt;font-family:"Times New Roman",serif'> <br>
+</span><span style='font-size:10.0pt;font-family:"Courier New"'>/usr/atria/bin/xcleardiff
+&amp;</span><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>
+<br>
+</span><span style='font-size:10.0pt;font-family:"Courier New"'>/usr/atria/bin/xlsvtree
+&amp;</span><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>
+(Same as </span><span style='font-size:10.0pt;font-family:"Courier New"'>xclearcase
+-vtree</span><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>)
+</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:red'>[Potential
+Pitfall]</span><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>:
+You may have to issue the command </span><span style='font-size:10.0pt;
+font-family:"Courier New"'>export LANG=C</span><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'> prior to launching GUI. </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Environment
+Configuration: </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Get shell config file sample from <i>node-name</i>:/home/vobadm/config/.bashrc,
+.cshrc, .kshrc. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Sample $HOME/.bashrc </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>export CLEARCASE=/usr/atria<br>
+...<br>
+export PATH=$CLEARCASE/bin:$PATH<br>
+...<br>
+alias ct='cleartool'<br>
+alias sv='cleartool setview'<br>
+alias svg='cleartool setview <i>username_view</i>'<br>
+...<br>
+MACH=`uname -n`<br>
+ID=`/usr/bin/id | /usr/bin/sed -e 's/^uid=[0-9]*(//' -e 's/).*$//'`<br>
+PS1='$MACH:($ID)$PWD&gt; '<br>
+if [ $PS1 ]<br>
+then<br>
+  if [ $CLEARCASE_ROOT ]<br>
+  then<br>
+    export PS1='[`basename $CLEARCASE_ROOT`]\h:(\u)\W&gt; '<br>
+  fi<br>
+fi</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Sample Unix
+Clearcase sessions: </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Make changes to a file: </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-size:
+10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Courier New"'>   <b><i>node-name</i>:(<i>username</i>)/home/<i>username</i>&gt;</b>
+cleartool setview <i>username_view</i></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-size:
+10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Courier New"'>   <b><i>node-name</i>:(<i>username</i>)/home/<i>username</i>&gt;</b>
+cd /vob/<i>vob-name</i>/src/<i>sub-directory</i></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-size:
+10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Courier New"'>   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct co -nc <i>filename.cpp</i></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-size:
+10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Courier New"'>     <i>---
+edit file ---</i></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-size:
+10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Courier New"'>   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>Directory-name</i></b>
+ct ci <i>filename.cpp</i></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-size:
+10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Courier New"'>   Add
+comments here.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-size:
+10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Courier New"'>   .</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-size:
+10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Courier New"'>   exit</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>                </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Comments
+terminated with a dot (.). Use exit to get out of Clearcase view and return to
+Unix shell. </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Add new file to Clearcase control: </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-size:
+10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Courier New"'>   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct co -nc .<br>
+   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+cp /..../<i>new-file</i> ./<br>
+   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct mkelem -ci -nc <i>new-file</i></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct ci -nc .</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Checkout directory
+(.), copy file and add it to clearcase control. Then check-in directory.
+Directory needed updating to reflect change to its contents. Note that new
+files added to the directory can not be viewed by others until the directory is
+checked in. Example of adding all files to Clearcase control: </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>ct mkelem -ci -nc *</span><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Add new Directory to Clearcase
+     control: </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-size:
+10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Courier New"'>   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct co -nc .<br>
+   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct mkdir <i>DIRECTORY-NAME</i></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-size:
+10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Courier New"'>   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct ci -nc .<br>
+   ...<br>
+   <i>Add files to directory.</i></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-size:
+10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Courier New"'>   ...</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-size:
+10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Courier New"'>   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct ci -nc <i>DIRECTORY-NAME</i></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>                </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Clearcase Labels: </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct mklbtype -nc RELEASE_NAME_#.#.#<br>
+      (or: ct mklbtype -ordinary RELEASE_NAME_#.#.#)<br>
+   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct mklabel -recurse RELEASE_NAME_#.#.# <b>.</b> </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>First command
+creates the label. The second applies the label to the current directory
+&quot;.&quot; recursively on down the directory structure. Another example: </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>ct mklabel -recurse -follow
+-nc RELEASE_NAME_#.#.# directory-name</span><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'> <br>
+Where the option &quot;-follow&quot; allows </span><span style='font-size:10.0pt;
+font-family:"Courier New"'>mklabel</span><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'> to follow symbolic links. <br>
+Note: Must perform the command from a directory within the VOB. </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Update a file and
+apply the existing label to the new file: </span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct mklabel -replace -nc RELEASE_NAME_#.#.# <i>file-name</i>@@/main/4</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Move label from
+version 3 and now apply it to version 4. </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Remove old label: </span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct rmtype -rmall lbtype:OLD_RELEASE_NAME_#.#.#</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>List all labels: </span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct lstype -kind lbtype<br>
+   <b>OR</b></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct lstype -kind lbtype -short | sort<br>
+   <b>OR</b></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct lstype -kind lbtype -short | grep -i api | sort</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Second version
+lists all &quot;API&quot; labels. </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>List all labels on
+a file: </span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct lsvtree -all <i>file-name</i></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>                </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Second command
+does not quite work (??) </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Label formats:
+RELEASE_NAME_#.#.# </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Default labels
+created by Clearcase: </span></p>
+
+<ul type=disc>
+ <ul type=circle>
+  <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+      font-family:"Times New Roman",serif'>BACKSTOP: No changes allowed. No new
+      versions allowed when label applied. Also see &quot;lock&quot; command. </span></li>
+  <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+      font-family:"Times New Roman",serif'>CHECKEDOUT: Currently checked out
+      versions. </span></li>
+  <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+      font-family:"Times New Roman",serif'>LATEST: Latest version of a branch. </span></li>
+ </ul>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Create a view: <br>
+     <br>
+     To find the directory used for storing views issue the following command: </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>   <b>[<i>prompt</i>]&gt;</b> ct lsview<br>
+     greg_view            /net/<i>hostname</i>/views/viewstore/greg_view.vws<br>
+     steve_view           /net/<i>hostname</i>/views/viewstore/steve_view.vws<br>
+   ...</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Create view from
+views directory. Files there are <i>viewname</i>.vws </span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>   <b>[<i>prompt</i>]&gt;</b> cd /net/<i>hostname</i>/views/viewstore/<br>
+   <b>[<i>prompt</i>]&gt;</b> ct mkview -tag dave_view  ./dave_view.vws<br>
+   <b>[<i>prompt</i>]&gt;</b> ct lsview | grep dave_view<br>
+     dave_view            /net/<i>hostname</i>/views/viewstore/dave_view.vws<br>
+   <b>[<i>prompt</i>]&gt;</b> ct describe -l /net/<i>hostname</i>/views/viewstore/dave_view.vws<br>
+   ...</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Move a view: <br>
+     Assuming the move is on a single server and there are no checked out
+     files. Stop viewserver. </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-size:
+10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Courier New"'>cd /net/<i>hostname</i>/views/viewstore/<br>
+find <i>view-tag</i>.vws | cpio -pmd /<i>destination viewstore</i></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-size:
+10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Courier New"'>ct rmtag
+-view -all <i>view-tag</i></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-indent:-.25in;line-height:normal'><span style='font-size:
+10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"Courier New"'>ct
+unregister -view /net/<i>hostname</i>/views/viewstore/<i>view-tag</i>.vws<br>
+mv <i>view-tag</i>.vws <i>view-tag</i>.vws-backup<br>
+ct register -view /<i>destination viewstore</i>/<i>view-tag</i>.vws<br>
+ct mktag -view -tag <i>view-tag</i> /<i>destination viewstore</i>/<i>view-tag</i>.vws<br>
+ct startview <i>view-tag</i></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>rm <i>view-tag</i>.vws-backup</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Clearcase Clearmake: </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct lsco<br>
+   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+clearmake -C gnu -f Makefile<br>
+   <b>[<i>username_view</i>]<i>node-name</i>:(<i>username</i>)<i>sub-directory</i>&gt;</b>
+ct catcr file.o</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>One may also set
+the environment variable: </span><span style='font-size:10.0pt;font-family:
+"Courier New"'>export CCASE_MAKE_COMPAT=gnu</span><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'> <br>
+Check first if there are any files checked out. Run makefile. List
+configuration record. The advantage of clearmake is that derived objects
+(object files generated by compiling source, hence derived from the source) are
+stored with extended names. i.e. </span><i><span style='font-size:10.0pt;
+font-family:"Courier New"'>file-name</span></i><span style='font-size:10.0pt;
+font-family:"Courier New"'>.o@@26Feb.14:28:9621</span><span style='font-size:
+12.0pt;font-family:"Times New Roman",serif'> </span></p>
+
+<div class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>View default group on Windows PC: </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Open a DOS command prompt window. </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>cd Program
+     Files\Rational\Clearcase\etc\utils </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Execute the &quot;creds&quot; command
+     </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Read the &quot;Primary Group&quot;
+     domain. </span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>PC Configspec: right click on XX: drive +
+clearcase + properties. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Clearcase explorer: C:\Program
+Files\Rational\ClearCase\bin\clearexplorer.exe </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Clearcase find
+command: </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Tag &quot;-all&quot; refers to all files
+in VOB. </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Find all files with given label in
+     the VOB: <br>
+     </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct find
+     -all -type file -version 'lbtype(<i>LABEL-NAME</i>)' -print</span><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Find all new or changed files since
+     that with a specified label: <br>
+     </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct find
+     -all version '\!lbtype(<i>LABEL-NAME</i>) &amp;&amp;
+     version(/main/LATEST)' -print</span><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Find all files at the end of a branch
+     in current directory: <br>
+     </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct find ./
+     -version 'version(.../<i>branch-name</i>/LATEST)' -print</span><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Explanation of
+Clearcase views and file structure within a view: </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Views are required in order to use
+Clearcase. A unique view assigned to a user will: </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>allow a developer access to the VOB
+     data (source code storage) </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>provide a workspace are where users
+     can privately modify VOB data without disturbing the view of the VOB data
+     held by other developers. Changes are only accessible by others when a
+     file is checked into the VOB from the users private space. </span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>There are three types of views: </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Snapshot view: Changes and updates by
+     others are not available to a snapshot view until a new
+     &quot;snapshot&quot; is taken. </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Web view: accessible from Clearcase
+     Web interface. Similar to a snapshot view. </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Dynamic view: access to all versions
+     of VOB elements and view private objects as they are checked into the VOB.
+     </span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Directory Structure within view:</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>The Clearcase view
+and versioning system is based on a directory structure beneath what at first
+appears to be a standard set of files in a directory structure. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Example: (set view first: </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>ct setview <i>xxxxxx</i></span><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>) </span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=1 cellpadding=0 width="100%"
+ style='width:100.0%'>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>Clearcase
+  presentation</span></b></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>Unix
+  presentation</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>ct ls </span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>    <i>filename1.ext</i>@@/main/3                       
+  Rule: /main/LATEST<br>
+      <i>filename2.ext</i>@@/main/6                        Rule: /main/LATEST<br>
+      </span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>ls </span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>    <i>filename1.ext</i></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>    <i>filename2.ext</i></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>            </span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:white'>Note
+that there are three versions of the file in the main branch. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Actual Directory path representation: </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><i><span
+style='font-size:10.0pt;font-family:"Courier New"'>filename1.ext</span></i><span
+style='font-size:10.0pt;font-family:"Courier New"'>@@/              <b>-
+Actually a directory name not a file name</b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>               LABEL-1      
+<b>- Actualy a file with the full contents.</b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>               LABEL-2</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>               main/        
+<b>- Directory of main branch.</b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                    LABEL-1 
+<b>- Actual file with full contents of file.</b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                    LABEL-2 
+<b>- Actual file with full contents of file.</b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                    0       
+<b>- Actual file containing version zero.</b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                    1       
+<b>- Actual file containing version 1</b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                    2       
+<b>- Actual file containing version 2</b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                    3       
+<b>- Actual file containing version 3</b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                    LATEST  
+<b>- Actual file with full contents of file.</b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Note: </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Clearcase stores the full contents of
+     the file saved and not a diff between versions like RCS or SCCS which
+     builds versions of the file when neccessary. </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>The file &quot;3&quot; and
+     &quot;LATEST&quot; are identical. </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>    cd <i>filename.ext</i>@@/main<br>
+    diff 3 LATEST<br>
+    </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>This will show no
+change between the files. </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Search all archived files for a
+     string: <br>
+     </span><span style='font-size:10.0pt;font-family:"Courier New"'>find <i>filename.ext</i>@@
+     -print grep '<i>wordToFind</i>' {} \;</span><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'> </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>This knowledge can
+facilitate searches in previous versions of source code. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Relationship between views and directory
+structure:</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Each view will
+have the directory structure described above within its view. </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>/view/...                            
+<b>- View root directory</b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>/view/<i>view-name1</i>/<br>
+                bin/...               <b>- Entire OS file system viewed from
+here for <i>view-name1</i></b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                etc/..</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                .../...</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                vob/<i>vob-name</i>/src/<i>filename1.ext</i>  
+<b>- Unix presentation or <i>filename1.ext@@</i> for &quot;ct ls&quot;</b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                           
+.../...   <b>- Contents of Clearcase VOB</b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>/view/<i>view-name2</i>/<br>
+                bin/...               <b>- Entire OS file system viewed from
+here for <i>view-name1</i></b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                etc/..</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                .../...</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                vob/<i>vob-name</i>/src/<i>filename1.ext</i></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                           
+.../...   <b>- Contents of Clearcase VOB</b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>                </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>This path </span><span
+     style='font-size:10.0pt;font-family:"Courier New"'>/view/...</span><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'> is viewable
+     by the regular UNIX user, with or without setting the view. </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>When you set your view (&quot;ct
+     setview <i>view-name1</i>&quot;), it allows one to view the Clearcase
+     archive from </span><span style='font-size:10.0pt;font-family:"Courier New"'>/vob/<i>vob-name</i>/...</span><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'>. </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>The above path is for </span><span
+     style='font-size:10.0pt;font-family:"Courier New"'>/view/<i>view-name1</i>/</span><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>The path </span><span
+     style='font-size:10.0pt;font-family:"Courier New"'>/view/<i>view-name1@@</i>/</span><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'> will show
+     all the revision branches. i.e. </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>/view/<i>view-name1@@</i>/vob/<i>vob-name</i>/main/LATEST/<i>directory-name</i>/main/LATEST/...<br>
+                                   0/...<br>
+                                                            0/...<br>
+                                                            1/...<br>
+                                                            2/...<br>
+                                   1/...<br>
+    </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Configspec: </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Configspec specifies rules of viewing
+specified elements which will be shown in a given view. The system default
+configspec can be found in </span><span style='font-size:10.0pt;font-family:
+"Courier New"'>$ATRIAHOME/default_config_spec</span><span style='font-size:
+12.0pt;font-family:"Times New Roman",serif'> (Typically: </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>/usr/atria/default_config_spec</span><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>) </span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Basic configspec:</span></b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> <br>
+(</span><span style='font-size:10.0pt;font-family:"Courier New"'>/<i>destination
+viewstore</i>/<i>view-tag</i>.vws/config_spec</span><span style='font-size:
+12.0pt;font-family:"Times New Roman",serif'>) </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>element * CHECKEDOUT<br>
+element * /main/LATEST<br>
+    </span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Pattern matching:</span></b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></p>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="100%"
+ style='width:100.0%'>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>Pattern</span></b></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>Description</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>*</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Matches all
+  elements in the path but not recursively.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>*.h</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Matches all
+  elements in the path which match the suffix &quot;.h&quot;, but not
+  recursively.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>src/Makefile</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Matches all
+  elements in the path in a directory named &quot;src&quot; which match this
+  file name.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>src/.../Makefile</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Matches all
+  elements in the directory/subdirectory tree named &quot;src&quot; which match
+  this file name.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>src/.../*.[ch]</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Matches all
+  elements with the suffic &quot;.h&quot; and &quot;.c&quot; in the
+  directory/subdirectory tree named &quot;src&quot;.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>src/...</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Matches all
+  elements (files and directories) in the directory/subdirectory tree named
+  &quot;src&quot;.</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;display:none'>&nbsp;</span></p>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="100%"
+ style='width:100.0%'>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>Config
+  Rule</span></b></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>Description</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>element * CHECKEDOUT</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>This rule is
+  mandatory. Without this rule, any file that is checked out will not be seen
+  in a view.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>element -directory *
+  /main/LATEST</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Look at latest
+  version of the directory on the main branch.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>element -directory * /<i>branch-name</i>/LATEST</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Look at latest
+  version of the directory on the defined branch.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>element -file * /main/<i>version-number</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Show this
+  particular version number of all files in view.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>element * <i>LABEL</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Show elements
+  with this label. (i.e. </span><span style='font-size:10.0pt;font-family:"Courier New"'>element
+  * /main/LABEL3</span><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>element * <i>rule-name</i>
+  -time <i>time</i></span><span style='font-size:12.0pt;font-family:"Times New Roman",serif'><br>
+  element * <i>rule-name</i> -time 26-Oct.14:32</span></p>
+  </td>
+  <td valign=top style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Show elements
+  which comply with this rule and last modified prior to <i>time</i></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>element * <i>rule-name</i>
+  -time <i>time</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Show elements
+  which comply with this rule and last modified prior to <i>time</i></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>element * <i>/vob/vob-name/AppName/*
+  LABEL</i></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Show elements in
+  the specified directory with the given label.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:10.0pt;font-family:"Courier New"'>element /vob/<i>projectA</i>/...
+  /main/LATEST</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Rule applies
+  only to specified directory hierarchy.</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:white'>Branching:
+</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Branching can be performed to: </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Allow parallel development between
+     two developers and later merge the code. </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Create a new version of the software
+     with different features for a specific purpose. </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Add features in a separate branch to
+     be merged in later after it is proven. The benefit is to allow the main
+     branch to continue without being disturbed. </span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Configspec to view branch: </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>element * CHECKEDOUT<br>
+element * .../branchx/LATEST<br>
+element * /main/LATEST -mkbranch branchx<br>
+    </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>This configspec
+will create a new branch for new files added or for files checked out. If file
+is checked out from </span><span style='font-size:10.0pt;font-family:"Courier New"'>/main/LATEST</span><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>, then trigger
+(mkbranch branchx) executes to create a new branch for the file checked out. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>The branch type must first be created with
+the command: </span><span style='font-size:10.0pt;font-family:"Courier New"'>mkbrtype
+-c &quot;Comment goes here&quot; branchx</span><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'><br>
+Create the branch type before creating the actual branch. Only one branch type
+of a given name will exist. Many files may exist with the branches of the same
+branch type. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Example of creating a branch: </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:10.0pt;
+     font-family:"Courier New"'>ct mkbrtype -c &quot;Comment goes here&quot;
+     BugFix_branch_Y</span><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>
+     </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:10.0pt;
+     font-family:"Courier New"'>ct setview <i>view-name</i></span><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:10.0pt;
+     font-family:"Courier New"'>ct mkbranch -nc BugFix_branch_Y <i>file-to-branch.cpp</i></span><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>This will create
+version &quot;0&quot; of <i>file-to-branch.cpp</i> in the branch named </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>BugFix_branch_Y</span><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Create a branch off of version 5 of <i>file-to-branch.cpp</i>
+in branch main. <br>
+</span><span style='font-size:10.0pt;font-family:"Courier New"'>ct mkbranch -nc
+BugFix_branch_Y <i>file-to-branch.cpp</i>@@/main/5</span><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Create branch using all source: </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>ct mkbranch -nco -c
+&quot;Bugfix patch B&quot; patch_B *.cpp *.h</span><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'> <br>
+GUI: </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct lsvtree
+-g <i>file-name</i></span><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>
+</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Merging:</span></b><span style='font-size:
+12.0pt;font-family:"Times New Roman",serif'> If one wishes to include the
+changes made in a branch into the &quot;latest&quot; version in the
+&quot;main&quot; branch, one would perform a &quot;merge&quot;. </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Merge version 5 on the branch into
+     the &quot;latest&quot; version in the &quot;main&quot; branch: <br>
+     </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct merge
+     -to <i>file-to-merge.cpp</i> -insert -version /main/BugFix_branch_Y/5</span><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Specify consecutive versions 2
+     through 5: <br>
+     </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct merge
+     -t <i>file-to-merge.cpp</i> -insert -version /main/<i>BugFix_branch_Y</i>/2/main/<i>BugFix_branch_Y</i>/5</span><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Merge all changes in a branch into
+     the &quot;main&quot; branch: <br>
+     </span><span style='font-size:10.0pt;font-family:"Courier New"'>ct
+     findmerge <i>file-to-merge.cpp</i> -fversions .../<i>BugFix_branch_Y</i>/LATEST
+     -merge</span><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>
+     </span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>List all branches: </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>ct lstype -kind brtype</span><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>GUI Tools: </span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Tools:</span></b><span style='font-size:
+12.0pt;font-family:"Times New Roman",serif'> </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>xclearcase:</span></b><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'> <br>
+     Command: </span><span style='font-size:10.0pt;font-family:"Courier New"'>/usr/atria/bin/xclearcase</span><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>xcleardiff:</span></b><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'> <br>
+     Command: </span><span style='font-size:10.0pt;font-family:"Courier New"'>/usr/atria/bin/xcleardiff</span><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'> <br>
+     Motif resource file: (Add to </span><span style='font-size:10.0pt;
+     font-family:"Courier New"'>$HOME/.Xdefaults</span><span style='font-size:
+     12.0pt;font-family:"Times New Roman",serif'>) </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>xcleardiff*promptBrightColor:   yellow<br>
+xcleardiff*changeColor:         blue<br>
+xcleardiff*deleteColor:         red<br>
+xcleardiff*insertColor:         green<br>
+    </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>xlsvtree:</span></b><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'> <br>
+     Command: </span><span style='font-size:10.0pt;font-family:"Courier New"'>/usr/atria/bin/xlsvtree</span><span
+     style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:red'>[Potential
+Pitfall]</span><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>:
+You may have to issue the command </span><span style='font-size:10.0pt;
+font-family:"Courier New"'>export LANG=C</span><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'> prior to launching GUI. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>Common resources:</span></b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> <br>
+Motif resource file: (Add to </span><span style='font-size:10.0pt;font-family:
+"Courier New"'>$HOME/.Xdefaults</span><span style='font-size:12.0pt;font-family:
+"Times New Roman",serif'>) </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>*scheme:              Monet<br>
+*XmText*marginHeight: 4<br>
+*foreground:          black           <b><i>- Text color</i></b></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>*background:          white</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>    </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>Version String
+Generation: </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Makefile: </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>...<br>
+target: version.h $(OTHER_OBJS)<br>
+     cc -o target -DDATE =&quot;\&quot;@(#)`date`\&quot;&quot; $(OTHER_OBJS)<br>
+...<br>
+    </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Times New Roman",serif'>Source Code: (.h file) </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;line-height:normal'><span style='font-size:10.0pt;font-family:
+"Courier New"'>...<br>
+char *version = &quot;@(#)target R3.0&quot;;<br>
+char *version_time = DATAE;<br>
+...<br>
+    </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>This is used in conjunction with the UNIX </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>what</span><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> command. (Not
+available on Linux) </span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
