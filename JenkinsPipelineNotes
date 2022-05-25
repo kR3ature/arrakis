@@ -1,0 +1,48 @@
+pipeline {
+    agent any
+    stages {
+
+        stage('Stage 1 Name') {
+                steps {
+                    build '<JenkinsPathtoJob>'+ params.<paramasName>
+                }
+        }
+
+        stage('Stage 2 Name') {
+                steps {
+                    build '<JenkinsPathtoJob>'+ params.<paramasName>
+                }
+        }
+
+        stage('Parallel Stages') {
+            parallel {
+                stage('Parallel stage one') {
+                    steps {
+                        build '<JenkinsPathtoJob>'+ params.<paramasName>   
+                    }
+                }
+                stage('Parallel stage two') {
+                    steps {
+                        build '<JenkinsPathtoJob>'+ params.<paramasName>   
+                    }
+                }
+                stage('Parallel stage three') {
+                    steps {
+                        build '<JenkinsPathtoJob>'+ params.<paramasName>   
+                    }
+                }
+                stage('Parallel stage four') {
+                    steps {
+                        build '<JenkinsPathtoJob>'+ params.<paramasName>   
+                    }
+                }
+                
+            }
+        }
+        stage('Post statge name') {
+                steps {
+                    build '<JenkinsPathtoJob>'+ params.<paramasName>
+                }    
+        }
+    }
+}
