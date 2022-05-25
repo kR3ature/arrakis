@@ -1,0 +1,680 @@
+    Configure user aliases:
+    File: $HOME/.bashrc
+
+        alias ct=/usr/atria/bin/cleartool
+        alias sv='/usr/atria/bin/cleartool setview'
+        umask 022
+        
+
+    	File: $HOME/.cshrc
+
+        alias ct /usr/atria/bin/cleartool
+        alias sv '/usr/atria/bin/cleartool setview'
+        umask 022
+        
+
+    This umask will set the default privileges on new files and direcotries. Default protection will be set so that the user may write data but others can read.
+
+    Commands:
+    ClearCase Command 	Description
+    ct -ver 	Display Clearcase, cleartool, db_server and VOB database schema version.
+    ct lsvob 	List vob mount table:
+
+    * /vob/VOB-NAME.vbt       /hosts/host-name/r1vob/vobs/vobstore/VOB-NAME.vbs public
+    * /vob/practice_vob.vbt  /hosts/host-name/view-name/Vobs/vobstore/practice_vob.vbs public
+
+    ct dump element-or-DO 	Print internal Clearcase info.
+    ct lsview 	List all views:
+
+      millesc_view   /hosts/host-name/view-name/Views/millesc_view.vws
+    * user-name       /hosts/host-name/view-name/Views/reg_view.vws
+
+    ct lsview view-tag 	List view path.
+    ct mktag -view -tag dynamic-view-name -nstart /hosts/node-name/home/cleardata/views/dynamic-view-name
+    or
+    ct mktag -vob vob-tag ... 	Create a view-tag or VOB-tag.
+    ct mkview -tag user1_view -stgloc viewstore 	Create a new view in "viewstore" Clearcase server view mount point (see YoLinux client or server installation tutorial).
+    List view storage locations: ct lsstgloc
+    ct mkview -tag tmpA_view /hosts/node-name/home/cleardata/views/tmpA_view 	Create a new view.
+    ct setview user-name_view 	Set current view to user-name_view.
+    ct startview common_view 	Set current view to common_view without starting a Clearcase shell environent. It allows one to view (only) the files. Path: /view/common_view/vob/vob-name/...
+    ct endview common_view
+    ct endview -server user-name_view 	Deactivate a Clearcase view. (First exit view)
+    Useful if you get stale NFS handles.
+    ct rmview -tag temp_view
+    or
+    ct rmview temp_view 	Remove view temp_view.
+    cleartool setview username_view
+    sv user-name_view 	Set Clearcase view. See alias defined above.
+    ct pwv 	Print working view/current view:
+
+    Working directory view: username_view
+    Set view: username_view
+
+    echo $CLEARCASE_ROOT 	Print current view path.
+    ct ls -l
+    ct ls -vob_only 	Using current view, show files, private files, file version and rule.
+    -vob_only: List elements and not derived objects
+    Format:
+
+    ...
+    version              file.ext@@/main/2       Rule: element */main/LATEST
+    directory version    Directoy-name@@/main/2  Rule: element * /main/LATEST
+    view private object  file2.c
+    ...
+
+    ct lstype -kind lbtype -list labels 	List labels
+    ct lsvtree -all file-name.ext 	List file version label and build label: (version tree)
+
+    file-name.ext@@/main
+    file-name.ext@@/main/0
+    file-name.ext@@/main/1 (BUILD_1_0)
+    file-name.ext@@/main/2 (BUILD_1_1)
+
+    ct lsvtree -all pref* 	List file version label and build label for files beginning with "pref"
+    ct lshistory [all] file-or-directory
+    ct lshistory file-name 	List file or directory version history.
+    List event rocords for a given file.
+    ct chevent -c 'new-comment-goes-here' -replace -event event-id
+    ct chevent -c 'new-comment-goes-here' -replace -lbtype label 	Change the comment on a version of an element.
+    Lookup event id: ct lsh -event file-or-element
+    Change the comment on a label.
+    ct lsco
+    ct lsco -r
+    ct lsco -avobs -me
+    ct lsco -avobs -cview 	List all checked out files in current directory.
+    Flag "-r" recusivly looks in sub directories.
+    List all files checked out to all views.
+    List checkouts in view.
+    ct lscheckout -l
+    ct lsco -l
+    ct lsco -recursive -me -cview 	List checked out files.
+    (same)
+    List files in current directory and subdirectories checked out to you in current view. Omit -cview tag to get all.
+    ct catcr file-name 	List configuration record for a file.
+    ct find ./ -branch 'brtype(branch-name)' -print
+    ct find ./ -version(main/LATEST) && \! version(LABEL_X)' -print
+    ct find -avobs -nxname -element 'brtype(view_name)' -print 	List files in branch with search name or attribute.
+    List files with label "LATEST" but not LABEL_X.
+    ct lsprivate
+    ct lsp -co 	List all private files in current view. View private files are files residing in the Clearcase filesystem but not under the control of Clearcase. i.e. object files as a result of a compile. May not be viewable by others.
+    List files checked out to current view.
+    ct mklbtype -nc LABEL_NAME
+    ct mklbtype -c "comment" LABEL_NAME 	Create a label to be used later.
+    ct lstype -kind lbtype -short | sort 	List labels.
+    ct describe -l file.ext 	Describe object in VOB. Lists branch and version of file and configspec used in view.
+    ct describe file-or-directory 	List file or directory information.
+    ct describe -long element:file-or-directory 	List file or directory information.
+    ct describe -long vob:/vob 	List vob information.
+    ct mklabel LABEL_NAME file-name.ext
+    ct mklabel -r LABEL_NAME 	Apply label to a file.
+    Label elements in directory tree.
+    ct mklabel -replace NEW_LABEL_NAME file-name.ext@@/main/4 	Apply label to a newer version of the file.
+    ct rmtype -rmall -force lbtype:LABEL_NAME
+    ct rmtype -lbtype -rmall LABEL_NAME 	Remove a label of the name given. The option "-rmall" causes the removal of all instances of the label on all files / directories.Remove label type and all occurrences of the label.
+    ct rmtype lbtype:LABEL_NAME 	Remove label from Clearcase. It will not be removed if label has been applied. Use option "-rmall" to remove label and all instances of its application.
+    ct rmtype -rmall -brtype branch-type 	Remove branch and all files / directories in branch from Clearcase. Data disposed in "lost-found".
+    ct find -avobs -version "lbtype (Build-Label)" -print
+    ct find . -name '*.[hc]' -element 'lbtype_sub(LABEL_NAME)' -print 	Print all files and file versions going into build specified.
+    list all .h and .c files whith the given label.
+    ct co -nc file-name 	Check-Out file (RCS command) -No Comment
+    ct mkdir directory-name 	Create a directory. Checkout parent directory first.
+    ct ln -s source-directory-name local-directory-name 	Create a symbolic link to a directory. Checkout parent directory first.
+    ct mkelem -ci -nc filename 	Add file to Clearcase control.
+    ct rmelem filename 	Remove file from Clearcase control. All history and knowledge of the element is completely removed. By contrast, the "ct rm" command will remove the file and not the history and the directory must be checked out in order to make this change.
+    ct rmelem -rm filename 	Remove file from Clearcase control and remove private view file.
+    ct rmelem directory-name/* 	Remove directory, revision history and its contents from Clearcase control.
+    ct rmver filename@@/main/LATEST
+    or
+    ct rmver filename
+    or
+    ct rmver filename@@/main/22
+    or remove specifed version on main branch:
+    ct rmver -force -xlabel -ver /main/22 file-or-element-name 	Remove latest version checked in of the file from Clearcase. Second example removes version 22 from the Clearcase change management system. Previous versions will be available from the archive.
+    ct rm filename 	Remove file from Clearcase view. First perform a checkout ("ct co") of the file and directory. Past versions will be available from the archive although not visible in current view. Safer than "ct rmelem" which removes all knowledge of the file old and new.
+    ct reserve file-name 	Lock file. Convert unreserved checkout to reserved.
+    ct unco file-name
+    ct unco -rm file-name
+    ct uncheckout file-name 	UN-Check-Out file. Cancel a checkout of a file.
+    Cancel a checkout of a file and remove file which was checked out. Not removed from Clearcase, just view private the checked out file is deleted/cleaned up.
+    ct co -unr -nc file-name 	Checkout file even though file is checked out by another. Checkout "unreserved", must be merged at a later time.
+    ct checkout -unreserved file-name 	Not locked. Checkout to read, print, etc. Same as above command.
+    ct ci file-name 	Check-In file. (also ct checkin file-name) Enter comment,enter "." as sole character on line and enter.
+    ct diff -gra -pre file-name &
+    ct diff -pred file-name
+    ct xdiff -pred file-name 	Graphical Diff/Merge tool.
+    Clearcase diff between current file and predecessor.
+    X-windows diff with predecessor.
+    ct mv file-name_A file-name_B 	Rename a file. Be sure to checkout the parent directory first. If moving file to a new directory, check out the target directory as well.
+    ct protect -r -chmod 775 directory-or-file-name 	Set directory/file/element protection.
+    Configspec commands 	
+    ct catcs
+
+    ct catcs -tag view_tag
+    	Print rules of current view (configspec):
+
+    element * CHECKEDOUT
+    element * /main/LATEST
+
+
+    Look at the configspec associated with another view.
+    ct edcs 	Edit current rules of view (config spec):
+    Change from:
+
+    element * CHECKEDOUT
+    element * /main/LATEST
+
+    To:
+
+    element * Build-Label
+    element -directory * /main/Latest
+
+    Close vi: wq
+    Set config spec for view "username_view"? [yes]
+    ct setcs -default
+    ct setcs -cur 	Reset to default view rules.
+    Re-evaluate current configspec.
+    ct update -add_loadrules 	Updates elemets in snapshot view. GUI tool. Reevaluates config spec and reselects VOB elements to show. The option "-add_loadrules" allows you to load rules to your config spec and load elements which satisfy the rules.
+    Help and Information commands 	
+    ct man clearcase-command
+    ct man env_ccase 	Man page for Clearcase command.
+    List Clearcase environment variables.
+    ct apropos search-word 	List commands and man page summaries for related Clearcase command.
+    ct help
+    ct help clearcase-command 	Help facility (simple). Lists possible command arguments.
+    Tree/Branch commands 	
+    ct lstype -kind brtype
+    ct lstype -kind brtype -invob /vob/vob-name 	List all branches.
+    List all branches in the vob specified.
+    ct find -avobs -version 'brtype(branch-type)' -print 	Find all files of the specified branch name in all mounted VOB's. Find branch name with the ct lstype command..
+    ct lsvtree -all *
+    ct lsvtree file-name
+    ct lsvtree -g file-name 	List version trees (labels and branches) of files (even those without labels or branches).
+    List all branches of specified file.
+    Launch GUI display and show version tree (labels and branches) for a given file.
+    ([Potential Pitfall]: You may have to issue the command export LANG=C prior to launching GUI.)
+    ct chtype 	Change element type or rename branch.
+    ct mkbranch
+    ct mkbranch -nc branch-name file-to-branch.cpp 	Create a new branch in version tree. Use the command mkbrtype to create the branch type (name) first. This command also checks out the file. The config spec needs to include this branch so file can be viewed.
+    ct rmbranch 	Remove a branch in version tree.
+    ct mkbrtype
+    mkbrtype -c "Comment goes here" branch_name 	Create a new branch type object.
+    ct merge 	Merge changes/differences of a file from another branch.
+    ct findmerge
+    ct findmerge ./ -ftag VIEW-TAG -print 	Determines whether a merge is required for a file in your view.
+    Find files in current directory tree which need to be merged. Use the describe command to see if branch has been merged. If so it wil be stated as such.
+    Derived Objects commands 	
+    ct lsdo -l 	List derived objects.
+    ct rmdo 	Remove a derived object.
+    ct winkin *.o *.a executables 	Wink-in a derived object.
+    Admin commands 	
+    clearexport_ffile -r directory-name 	Create file cvt_data which is the result of a recursive export of files from given directory name..
+    clearlicense 	List number of allowable client connections and list who is holding a license.
+    clearlicense -rel user 	Release license from user who is holding a license.
+    getcache
+    ct getcache -mvfs 	Display Clearcase view or MVFS cache parameters.
+    Troubleshoot by listing cache misses (Cache misses are bad). Perform this command on the server itself.
+    getlog 	Examine Clearcase log files.
+    hostinfo 	Display configuration data for a Clearcase host.
+    lock
+        ct lock vob:/vob/project
+        ct lock -brtype -obsolete branch-type
+        ct lock lbtype:LABEL_NAME
+        ct lock file-name.cpp
+        ct lock -nusers user1, user2 brtype:branchX
+    	Command to lock a VOB, element, branch, type object or storage pool.
+        Lock vob for read-only access.Disable write, create, delete, modify
+        Hide branch permanently.
+        Lock code with given label.
+        Lock a file from use.
+        Lock all users except user1 and user2 on branchX
+    unlock
+    ct unlock -brtype branch-type 	Unlock a VOB object.
+    lslock 	List locks.
+    lsclients 	List client list for lisence or registry host server.
+    lsreplica 	List replicas of a VOB.
+    mkpool 	Create or modify VOB storage pool.
+    rmpool 	Remove a storage pool from a VOB.
+    lspool 	List storage pools.
+    chpool 	Change the storage pool to which an element is assigned.
+    mkregion 	Register a new Clearcase network region.
+    rmregion 	Unregister a Clearcase network region.
+    lsregion 	List Clearcase network region.
+    mktrigger 	Attach a trigger to an element.
+    rmtrigger 	Remove trigger from an element.
+    mktrtype 	Create a trigger object.
+    mkvob
+    ct mkvob -tag VOB-tag -c "comment" /vobpath 	Create and register a versioned object base.
+    rmvob
+    ct rmvob /vobpath 	Remove a VOB.
+    lsvob 	List of mounted VOBs.
+    checkvob 	Fix inconsistancies between VOB database and storage pools.
+    protectvob 	Change owner or group of a VOB.
+    reformatvob 	Update the format of a VOB. Use command "ct -ver" to find the current VOB database schema version.
+    rmtag 	Remove a VOB tag from a storage registry.
+    complete_migration 	Take VOB out of migration mode.
+    mount
+    ct mount VOB-tag 	Activate a VOB.
+    unmount
+    ct umount VOB-tag 	Deactivate a VOB.
+    ("ct describe -vob" to show VOB info/owner)
+    register 	Create an entry in the VOB/view storage registry.
+    unregister 	Remove a VOB/view from storage registry.
+    relocate 	Move elements and directory trees from one VOB to another.
+    rename 	Asign a new name to a Clearcase object (i.e. pool, replica, label). Use mv to change the name of a file or directory.
+    setcache
+    ct setcache -view -host -cachesize 1024k
+    ct setcache -view -site -cachesize 2m
+    ct setcache -view -cachesize 5m view_tag 	Set Clearcase view or MVFS cache parameters.
+    Set cache size for all views on server to 1024 Kb.
+    Set cache size for all views site-wide to 2 Mb.
+    set cache size for a single specified view.
+    View with ct lssite -inquire
+    mvfscache 	Controls and monitors MVFS caches (dynamic views only).
+    ct lssite -inquire 	List site-wide properties in the site config registry.
+    setsite 	Sets or unsets site-wide properties in the site config registry.
+        View cache size
+        defaults for Windows clients
+        defaults for chechin and checkout preserve
+    space 	Report VOB disk space usage.
+
+    GUI tools:
+
+        /usr/atria/bin/xclearcase &
+        /usr/atria/bin/xcleardiff &
+        /usr/atria/bin/xlsvtree & (Same as xclearcase -vtree) 
+
+    [Potential Pitfall]: You may have to issue the command export LANG=C prior to launching GUI.
+
+Environment Configuration:
+
+Get shell config file sample from node-name:/home/vobadm/config/.bashrc, .cshrc, .kshrc.
+
+Sample $HOME/.bashrc
+
+export CLEARCASE=/usr/atria
+...
+export PATH=$CLEARCASE/bin:$PATH
+...
+alias ct='cleartool'
+alias sv='cleartool setview'
+alias svg='cleartool setview username_view'
+...
+MACH=`uname -n`
+ID=`/usr/bin/id | /usr/bin/sed -e 's/^uid=[0-9]*(//' -e 's/).*$//'`
+PS1='$MACH:($ID)$PWD> '
+if [ $PS1 ]
+then
+  if [ $CLEARCASE_ROOT ]
+  then
+    export PS1='[`basename $CLEARCASE_ROOT`]\h:(\u)\W> '
+  fi
+fi
+
+Sample Unix Clearcase sessions:
+
+    Make changes to a file:
+
+       node-name:(username)/home/username> cleartool setview username_view
+       node-name:(username)/home/username> cd /vob/vob-name/src/sub-directory
+       [username_view]node-name:(username)sub-directory> ct co -nc filename.cpp
+         --- edit file ---
+       [username_view]node-name:(username)Directory-name ct ci filename.cpp
+       Add comments here.
+       .
+       exit
+                    
+
+    Comments terminated with a dot (.). Use exit to get out of Clearcase view and return to Unix shell.
+
+    Add new file to Clearcase control:
+
+       [username_view]node-name:(username)sub-directory> ct co -nc .
+       [username_view]node-name:(username)sub-directory> cp /..../new-file ./
+       [username_view]node-name:(username)sub-directory> ct mkelem -ci -nc new-file
+       [username_view]node-name:(username)sub-directory> ct ci -nc .
+
+    Checkout directory (.), copy file and add it to clearcase control. Then check-in directory. Directory needed updating to reflect change to its contents. Note that new files added to the directory can not be viewed by others until the directory is checked in. Example of adding all files to Clearcase control: ct mkelem -ci -nc *
+
+    Add new Directory to Clearcase control:
+
+       [username_view]node-name:(username)sub-directory> ct co -nc .
+       [username_view]node-name:(username)sub-directory> ct mkdir DIRECTORY-NAME
+       [username_view]node-name:(username)sub-directory> ct ci -nc .
+       ...
+       Add files to directory.
+       ...
+       [username_view]node-name:(username)sub-directory> ct ci -nc DIRECTORY-NAME
+                    
+
+    Clearcase Labels:
+
+       [username_view]node-name:(username)sub-directory> ct mklbtype -nc RELEASE_NAME_#.#.#
+          (or: ct mklbtype -ordinary RELEASE_NAME_#.#.#)
+       [username_view]node-name:(username)sub-directory> ct mklabel -recurse RELEASE_NAME_#.#.# . 
+
+    First command creates the label. The second applies the label to the current directory "." recursively on down the directory structure. Another example: ct mklabel -recurse -follow -nc RELEASE_NAME_#.#.# directory-name
+    Where the option "-follow" allows mklabel to follow symbolic links.
+    Note: Must perform the command from a directory within the VOB.
+
+    Update a file and apply the existing label to the new file:
+
+       [username_view]node-name:(username)sub-directory> ct mklabel -replace -nc RELEASE_NAME_#.#.# file-name@@/main/4
+
+    Move label from version 3 and now apply it to version 4.
+
+    Remove old label:
+
+       [username_view]node-name:(username)sub-directory> ct rmtype -rmall lbtype:OLD_RELEASE_NAME_#.#.#
+
+    List all labels:
+
+       [username_view]node-name:(username)sub-directory> ct lstype -kind lbtype
+       OR
+       [username_view]node-name:(username)sub-directory> ct lstype -kind lbtype -short | sort
+       OR
+       [username_view]node-name:(username)sub-directory> ct lstype -kind lbtype -short | grep -i api | sort
+
+    Second version lists all "API" labels.
+
+    List all labels on a file:
+
+       [username_view]node-name:(username)sub-directory> ct lsvtree -all file-name
+                    
+
+    Second command does not quite work (??)
+
+    Label formats: RELEASE_NAME_#.#.#
+
+    Default labels created by Clearcase:
+        BACKSTOP: No changes allowed. No new versions allowed when label applied. Also see "lock" command.
+        CHECKEDOUT: Currently checked out versions.
+        LATEST: Latest version of a branch.
+
+    Create a view:
+
+    To find the directory used for storing views issue the following command:
+
+       [prompt]> ct lsview
+         greg_view            /net/hostname/views/viewstore/greg_view.vws
+         steve_view           /net/hostname/views/viewstore/steve_view.vws
+       ...
+
+    Create view from views directory. Files there are viewname.vws
+
+       [prompt]> cd /net/hostname/views/viewstore/
+       [prompt]> ct mkview -tag dave_view  ./dave_view.vws
+       [prompt]> ct lsview | grep dave_view
+         dave_view            /net/hostname/views/viewstore/dave_view.vws
+       [prompt]> ct describe -l /net/hostname/views/viewstore/dave_view.vws
+       ...
+
+    Move a view:
+    Assuming the move is on a single server and there are no checked out files. Stop viewserver.
+
+    cd /net/hostname/views/viewstore/
+    find view-tag.vws | cpio -pmd /destination viewstore
+    ct rmtag -view -all view-tag
+    ct unregister -view /net/hostname/views/viewstore/view-tag.vws
+    mv view-tag.vws view-tag.vws-backup
+    ct register -view /destination viewstore/view-tag.vws
+    ct mktag -view -tag view-tag /destination viewstore/view-tag.vws
+    ct startview view-tag
+    rm view-tag.vws-backup
+
+    Clearcase Clearmake:
+
+       [username_view]node-name:(username)sub-directory> ct lsco
+       [username_view]node-name:(username)sub-directory> clearmake -C gnu -f Makefile
+       [username_view]node-name:(username)sub-directory> ct catcr file.o
+
+    One may also set the environment variable: export CCASE_MAKE_COMPAT=gnu
+    Check first if there are any files checked out. Run makefile. List configuration record. The advantage of clearmake is that derived objects (object files generated by compiling source, hence derived from the source) are stored with extended names. i.e. file-name.o@@26Feb.14:28:9621
+
+View default group on Windows PC:
+
+    Open a DOS command prompt window.
+    cd Program Files\Rational\Clearcase\etc\utils
+    Execute the "creds" command
+    Read the "Primary Group" domain.
+
+PC Configspec: right click on XX: drive + clearcase + properties.
+
+Clearcase explorer: C:\Program Files\Rational\ClearCase\bin\clearexplorer.exe
+
+Clearcase find command:
+
+Tag "-all" refers to all files in VOB.
+
+    Find all files with given label in the VOB:
+    ct find -all -type file -version 'lbtype(LABEL-NAME)' -print
+
+    Find all new or changed files since that with a specified label:
+    ct find -all version '\!lbtype(LABEL-NAME) && version(/main/LATEST)' -print
+
+    Find all files at the end of a branch in current directory:
+    ct find ./ -version 'version(.../branch-name/LATEST)' -print
+
+Explanation of Clearcase views and file structure within a view:
+
+Views are required in order to use Clearcase. A unique view assigned to a user will:
+
+    allow a developer access to the VOB data (source code storage)
+    provide a workspace are where users can privately modify VOB data without disturbing the view of the VOB data held by other developers. Changes are only accessible by others when a file is checked into the VOB from the users private space.
+
+There are three types of views:
+
+    Snapshot view: Changes and updates by others are not available to a snapshot view until a new "snapshot" is taken.
+    Web view: accessible from Clearcase Web interface. Similar to a snapshot view.
+    Dynamic view: access to all versions of VOB elements and view private objects as they are checked into the VOB.
+
+Directory Structure within view:
+The Clearcase view and versioning system is based on a directory structure beneath what at first appears to be a standard set of files in a directory structure.
+
+Example: (set view first: ct setview xxxxxx)
+Clearcase presentation 	Unix presentation
+ct ls
+
+    filename1.ext@@/main/3                        Rule: /main/LATEST
+    filename2.ext@@/main/6                        Rule: /main/LATEST
+    
+
+	ls
+
+    filename1.ext
+    filename2.ext
+            
+
+Note that there are three versions of the file in the main branch.
+
+Actual Directory path representation:
+
+filename1.ext@@/              - Actually a directory name not a file name
+               LABEL-1       - Actualy a file with the full contents.
+               LABEL-2
+               main/         - Directory of main branch.
+                    LABEL-1  - Actual file with full contents of file.
+                    LABEL-2  - Actual file with full contents of file.
+                    0        - Actual file containing version zero.
+                    1        - Actual file containing version 1
+                    2        - Actual file containing version 2
+                    3        - Actual file containing version 3
+                    LATEST   - Actual file with full contents of file.
+                
+
+Note:
+
+    Clearcase stores the full contents of the file saved and not a diff between versions like RCS or SCCS which builds versions of the file when neccessary.
+    The file "3" and "LATEST" are identical.
+
+        cd filename.ext@@/main
+        diff 3 LATEST
+        
+
+    This will show no change between the files.
+    Search all archived files for a string:
+    find filename.ext@@ -print grep 'wordToFind' {} \;
+
+This knowledge can facilitate searches in previous versions of source code.
+
+Relationship between views and directory structure:
+Each view will have the directory structure described above within its view.
+
+/view/...                             - View root directory
+/view/view-name1/
+                bin/...               - Entire OS file system viewed from here for view-name1
+                etc/..
+                .../...
+                vob/vob-name/src/filename1.ext   - Unix presentation or filename1.ext@@ for "ct ls"
+                            .../...   - Contents of Clearcase VOB
+
+/view/view-name2/
+                bin/...               - Entire OS file system viewed from here for view-name1
+                etc/..
+                .../...
+                vob/vob-name/src/filename1.ext
+                            .../...   - Contents of Clearcase VOB
+                
+
+    This path /view/... is viewable by the regular UNIX user, with or without setting the view.
+    When you set your view ("ct setview view-name1"), it allows one to view the Clearcase archive from /vob/vob-name/....
+    The above path is for /view/view-name1/
+    The path /view/view-name1@@/ will show all the revision branches. i.e.
+
+    /view/view-name1@@/vob/vob-name/main/LATEST/directory-name/main/LATEST/...
+                                       0/...
+                                                                0/...
+                                                                1/...
+                                                                2/...
+                                       1/...
+        
+
+Configspec:
+
+Configspec specifies rules of viewing specified elements which will be shown in a given view. The system default configspec can be found in $ATRIAHOME/default_config_spec (Typically: /usr/atria/default_config_spec)
+
+Basic configspec:
+(/destination viewstore/view-tag.vws/config_spec)
+
+element * CHECKEDOUT
+element * /main/LATEST
+    
+
+Pattern matching:
+Pattern 	Description
+* 	Matches all elements in the path but not recursively.
+*.h 	Matches all elements in the path which match the suffix ".h", but not recursively.
+src/Makefile 	Matches all elements in the path in a directory named "src" which match this file name.
+src/.../Makefile 	Matches all elements in the directory/subdirectory tree named "src" which match this file name.
+src/.../*.[ch] 	Matches all elements with the suffic ".h" and ".c" in the directory/subdirectory tree named "src".
+src/... 	Matches all elements (files and directories) in the directory/subdirectory tree named "src".
+
+Config Rule 	Description
+element * CHECKEDOUT 	This rule is mandatory. Without this rule, any file that is checked out will not be seen in a view.
+element -directory * /main/LATEST 	Look at latest version of the directory on the main branch.
+element -directory * /branch-name/LATEST 	Look at latest version of the directory on the defined branch.
+element -file * /main/version-number 	Show this particular version number of all files in view.
+element * LABEL 	Show elements with this label. (i.e. element * /main/LABEL3)
+element * rule-name -time time
+element * rule-name -time 26-Oct.14:32 	Show elements which comply with this rule and last modified prior to time
+element * rule-name -time time 	Show elements which comply with this rule and last modified prior to time
+element * /vob/vob-name/AppName/* LABEL 	Show elements in the specified directory with the given label.
+element /vob/projectA/... /main/LATEST 	Rule applies only to specified directory hierarchy.
+
+Branching:
+
+Branching can be performed to:
+
+    Allow parallel development between two developers and later merge the code.
+    Create a new version of the software with different features for a specific purpose.
+    Add features in a separate branch to be merged in later after it is proven. The benefit is to allow the main branch to continue without being disturbed.
+
+Configspec to view branch:
+
+element * CHECKEDOUT
+element * .../branchx/LATEST
+element * /main/LATEST -mkbranch branchx
+    
+
+This configspec will create a new branch for new files added or for files checked out. If file is checked out from /main/LATEST, then trigger (mkbranch branchx) executes to create a new branch for the file checked out.
+
+The branch type must first be created with the command: mkbrtype -c "Comment goes here" branchx
+
+Create the branch type before creating the actual branch. Only one branch type of a given name will exist. Many files may exist with the branches of the same branch type.
+
+Example of creating a branch:
+
+    ct mkbrtype -c "Comment goes here" BugFix_branch_Y
+    ct setview view-name
+    ct mkbranch -nc BugFix_branch_Y file-to-branch.cpp
+
+This will create version "0" of file-to-branch.cpp in the branch named BugFix_branch_Y.
+
+Create a branch off of version 5 of file-to-branch.cpp in branch main.
+ct mkbranch -nc BugFix_branch_Y file-to-branch.cpp@@/main/5
+
+Create branch using all source: ct mkbranch -nco -c "Bugfix patch B" patch_B *.cpp *.h
+GUI: ct lsvtree -g file-name
+
+Merging: If one wishes to include the changes made in a branch into the "latest" version in the "main" branch, one would perform a "merge".
+
+    Merge version 5 on the branch into the "latest" version in the "main" branch:
+    ct merge -to file-to-merge.cpp -insert -version /main/BugFix_branch_Y/5
+
+    Specify consecutive versions 2 through 5:
+    ct merge -t file-to-merge.cpp -insert -version /main/BugFix_branch_Y/2/main/BugFix_branch_Y/5
+
+    Merge all changes in a branch into the "main" branch:
+    ct findmerge file-to-merge.cpp -fversions .../BugFix_branch_Y/LATEST -merge
+
+List all branches: ct lstype -kind brtype
+
+GUI Tools:
+
+Tools:
+
+    xclearcase:
+    Command: /usr/atria/bin/xclearcase
+    xcleardiff:
+    Command: /usr/atria/bin/xcleardiff
+    Motif resource file: (Add to $HOME/.Xdefaults)
+
+    xcleardiff*promptBrightColor:   yellow
+    xcleardiff*changeColor:         blue
+    xcleardiff*deleteColor:         red
+    xcleardiff*insertColor:         green
+        
+
+    xlsvtree:
+    Command: /usr/atria/bin/xlsvtree
+
+[Potential Pitfall]: You may have to issue the command export LANG=C prior to launching GUI.
+
+Common resources:
+Motif resource file: (Add to $HOME/.Xdefaults)
+
+*scheme:              Monet
+*XmText*marginHeight: 4
+*foreground:          black           - Text color
+*background:          white
+    
+
+Version String Generation:
+
+    Makefile:
+
+    ...
+    target: version.h $(OTHER_OBJS)
+         cc -o target -DDATE ="\"@(#)`date`\"" $(OTHER_OBJS)
+    ...
+        
+
+    Source Code: (.h file)
+
+    ...
+    char *version = "@(#)target R3.0";
+    char *version_time = DATAE;
+    ...
+        
+
+This is used in conjunction with the UNIX what command. (Not available on Linux) 
