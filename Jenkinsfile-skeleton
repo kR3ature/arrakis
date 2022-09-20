@@ -1,0 +1,74 @@
+pipeline {
+
+	options {
+		buildDiscarder(logRotator(numToKeepStr: '5'))
+	}
+
+	agent {
+		label 'xxxx'
+	}
+  triggers {
+ 			 cron '''TZ=America/Los_Angeles
+			H 0 * * *'''
+			}
+
+	parameters {
+	
+	separator(name:"GENERAL_PARAMS", sectionHeader: "GENERAL PARAMETERS")
+
+		string(
+			name: 'stringName' , \
+           		defaultValue: 'xx' , \
+			description: 'xxxxxx' )
+
+		booleanParam(
+			name:'booleanName', \
+			defaultValue: 'false', \
+			description: 'xxxxxxx' )
+
+
+	separator(name:"MAIN_PARAMS", sectionHeader: "MAIN PARAMETERS")
+
+		booleanParam(
+			name:'build_Main', \
+			defaultValue: 'true', \
+			description: 'Build Main?' )      
+      
+		string(
+			name:'main_branch', \
+			description: 'Branch to build', \
+			defaultValue: 'develop' )
+
+
+} // End of parameters
+
+
+
+
+
+	stages{
+		
+		
+		stage('Start Parallel Stage 1') {
+			parallel {
+					
+				stage('Main') {
+                  when { expression { params.build_Main } }
+					steps {
+						build (job: 'Main-Folder/Main/'+ params.main_branch,
+							parameters:    [[$class: 'BooleanParameterValue', name: 'xxxxx', value: params.xxxxxx ],
+									[$class: 'StringParameterValue', name: 'VERSION', value: params.version_tag ]])
+						}
+					}
+
+				}
+					}
+			}//end parallel
+		}//end Parallel Stage 1
+
+
+
+			}
+		}
+	}
+}
